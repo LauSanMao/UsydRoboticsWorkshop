@@ -12,7 +12,6 @@ Now, we'll make some changes to this very repository, and tell Git that we've do
 6. Now type in `git commit -m "Added my name"`. This tells git that you're sure you want to make these changes, and tells git to tell other people that these changes pertain to adding your name. (The `-m` stands for message. You must have a message with your changes, because git likes to **enforce** good coding practice.)
 7. Now type `git push origin master`. This tells git to pass your changes to github. You may have to login using your github username and password (or your email and password).
 8. `git pull` to add changes done on github onto local files
-9. 
 ## 2 Introduction to Python 
   
 -tbc
