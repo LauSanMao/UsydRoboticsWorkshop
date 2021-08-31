@@ -20,3 +20,23 @@ Now, we'll make some changes to this very repository, and tell Git that we've do
 ## 3 Introduction to OpenCV
   
 -tbc
+
+## Challenges and Proof of work
+1. Week 2 - 
+
+
+Write a program called `sayMyName.py` that prints out your name N times, where N is the first 2 digits of your SID.
+
+
+3. Week 3 -
+
+Be able to open and read both an image and a video of your choosing (can be taken off the Internet)
+
+5. Week 4 -
+
+Take an image of your choice (could be from the Internet or your own) and perform the following operations in separate instances (so don't do everything at once to the poor image).
+
+- Rescale it to be half the original size
+- Draw a shape (circle, line or rectangle) at the center of the image
+- Pass it through a greyscale, blur and then canny layer
+- Rotate it by 45 degrees
