@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 
 
-
 #reading images
 img = cv2.imread("cutie.jpg")
 cv2.imshow('Cutie', img)
@@ -46,12 +45,12 @@ cv2.imshow('Blur',blur)
 #canny
 canny=cv2.Canny(blur,125,200)
 cv2.imshow('Canny',canny)
-cv2.waitKey(0)
+
 
 #rotate image 45 degrees
 #Rotation
 def rotate(canny, angle, rotPoint=None):
-    (height,width)=img.shape[:2]
+    (height,width)=canny.shape[:2]
 
     if rotPoint is None:
         rotPoint=(width//2,height//2)
@@ -59,10 +58,27 @@ def rotate(canny, angle, rotPoint=None):
     rotMat = cv2.getRotationMatrix2D(rotPoint,angle,scale=1.0)
     dimensions =(width,height)
 
-    return cv2.warpAffine(img,rotMat,dimensions)
+    return cv2.warpAffine(canny,rotMat,dimensions)
 
 rotated= rotate(canny,-45)
 cv2.imshow('Rotate',rotated)
+
+#Read Video
+capture = cv2.VideoCapture('kitten.mp4')
+#VideoCapture(0) = Webcam input
+
+#capture=cv2.VideoCapture(0)
+
+while True:
+    isTrue,frame=capture.read()
+    #show frame
+    cv2.imshow('',frame)
+
+    #if the d key is pressed, kill screen
+    if cv2.waitKey(20) & 0xFF==ord('d'):
+        break
+
+capture.release()
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
