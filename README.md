@@ -13,10 +13,10 @@ Now, we'll make some changes to this very repository, and tell Git that we've do
 7. Now type `git push origin master`. This tells git to pass your changes to github. You may have to login using your github username and password (or your email and password).
 
 
-##2 Introduction to Python 
+## 2 Introduction to Python 
   
 -tbc
   
-##3 Introduction to OpenCV
+## 3 Introduction to OpenCV
   
 -tbc
