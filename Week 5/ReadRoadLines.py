@@ -1,6 +1,8 @@
 
 import cv2
 import numpy as np
+#add mask 
+#not done
 
 frame = cv2.imread('lane_img.jpg')
 edges = cv2.Canny(frame,400,600) # This uses the canny edge detector. The 100 and 200 are rather arbitrary parameters; the second should be larger than the first, play around to see what numbers work best for each image.
